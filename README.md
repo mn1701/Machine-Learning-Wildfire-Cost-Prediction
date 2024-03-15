@@ -14,7 +14,7 @@ Demo Video Link: https://drive.google.com/file/d/1uX1qRkTAR2GRR7SsL_c1m3eFLZ3cls
 
 Outline
 
-	Our project is about wildfires and predicting how much damage they’re going to cause. The official definition of a wildfire is “an unplanned, unwanted fire burning in a natural area.” If left unchecked, a wildfire can quickly grow out of control and become a serious threat to the local area. Unlike many other natural disasters, the vast majority are caused by humans, making them very unpredictable. This means that emergency responders need to be constantly ready for a fire breaking out. The goal of our project is to analyze a wildfire and the damage it’ll do.
+Our project is about wildfires and predicting how much damage they’re going to cause. The official definition of a wildfire is “an unplanned, unwanted fire burning in a natural area.” If left unchecked, a wildfire can quickly grow out of control and become a serious threat to the local area. Unlike many other natural disasters, the vast majority are caused by humans, making them very unpredictable. This means that emergency responders need to be constantly ready for a fire breaking out. The goal of our project is to analyze a wildfire and the damage it’ll do.
 Wildfires are chaotic and multifaceted natural disasters, and there are many predictions a firefighting agency wants to make. For example, they may want to predict how big the fire’ll get to determine if evacuations are necessary, or they may want to know what the financial impact of a wildfire will be. To that end, we have decided to build multiple models, each focusing on a different aspect of the problem.
 Total area of the fire, in acres
 This is recorded in two ways: The number of acres, and the “Size Class” of the fire.

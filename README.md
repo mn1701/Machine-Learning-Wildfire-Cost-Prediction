@@ -1,11 +1,19 @@
 Reilly Dunn, Mateo Escobar, Owen Hoover, Minh Nguyen
+
 Professor Maike Sonnewald
+
 ECS 171
+
 March 14, 2024
+
 Wildfires: Predicting the Cost
+
 Github Link: https://github.com/ReillyDunn-UCDavis/ECS-171-Wildfire-Project
+
 Demo Video Link: https://drive.google.com/file/d/1uX1qRkTAR2GRR7SsL_c1m3eFLZ3clsvc/view?usp=sharing  
+
 Outline
+
 	Our project is about wildfires and predicting how much damage they’re going to cause. The official definition of a wildfire is “an unplanned, unwanted fire burning in a natural area.” If left unchecked, a wildfire can quickly grow out of control and become a serious threat to the local area. Unlike many other natural disasters, the vast majority are caused by humans, making them very unpredictable. This means that emergency responders need to be constantly ready for a fire breaking out. The goal of our project is to analyze a wildfire and the damage it’ll do.
 Wildfires are chaotic and multifaceted natural disasters, and there are many predictions a firefighting agency wants to make. For example, they may want to predict how big the fire’ll get to determine if evacuations are necessary, or they may want to know what the financial impact of a wildfire will be. To that end, we have decided to build multiple models, each focusing on a different aspect of the problem.
 Total area of the fire, in acres
@@ -34,7 +42,9 @@ Duration of Fires: Mateo's work involves using regression models to estimate the
 Causes of Fires: Minh is tackling the prediction of wildfire cause and classification through a binary classifier and a neural network, respectively. Identifying the causes of wildfires is key to preventing future occurrences, whether they are human-induced or natural.
 Financial Cost: Given the limited data on financial costs in our main dataset, Reilly is exploring additional sources, such as CAL FIRE's statistics, to build a model that estimates the economic impacts of wildfires. This effort is particularly challenging but essential for understanding and mitigating the broader economic ramifications of wildfires.
 Our project seeks to provide useful tools for emergency services, policymakers, and environmental agencies in addition to advancing the academic understanding of wildfires through the division of the problem into these discrete areas and application of machine learning models. We hope to provide insightful information through this project that could completely change the way wildfires are anticipated, controlled, and mitigated. As we work together to close the gap between theoretical models and practical application, we are tackling one of the most important environmental challenges of our time with a forward-thinking approach. In the end, we see our project as a critical first step toward a more knowledgeable, adaptable, and proactive approach to managing the risks and effects of wildfires, protecting ecosystems and communities alike.
+
 Literature Review
+
 The United States Federal Emergency Management Agency (FEMA) defines a wildfire as “an unplanned, unwanted fire burning in a natural area.” These are mostly caused by humans, unintentionally, or intentionally, but can also have natural causes. Wildfires can have drastic impacts on both the environments they take place in and on surrounding human populations. Wildfires have been increasing in severity and becoming more costly to fight (EPA, 2022).
 Wildfires can have an impact on air quality, water quality, and biodiversity (Gill et al. 2013). Many plants and animals can be killed during these fires, which can lead to extinctions of some species. Additionally, the effects on water quality can damage aquatic habitats and hurt the animals living in them. As a result, wildfires are often catastrophic for the plants and animals in the ecosystem around them, and can cause lasting damage to them. Wildfires can also affect the climate of the world as a whole by releasing large amounts of carbon dioxide, which can contribute to climate change (EPA, 2022).
 	Human effects can come in the form of both health and property. The effects on air and water quality can have a negative effect on human populations. The detrimental effects towards climate change also threaten to lead to more issues for human health. In addition, wildfires can be very dangerous and costly for those living near wildland areas, in what is known as the wildland urban interface (WUI). The WUI is the area where wildland and human developed land meets and mixes (U.S. Fire Administration, 2022). These areas are at high risk of wildfire because of their proximity to the areas in which these fires can spread. Those living in the WUI face more direct danger to life and property loss in the case of wildfire. In other estimations of wildfire suppression costs, researchers have also considered geography, amount of private land, amount of housing, fuel characteristics, administrative designation, and decision making influences. (Mattioli et al. 2022)
@@ -42,7 +52,9 @@ Wildfires can have an impact on air quality, water quality, and biodiversity (Gi
 In addition to the cost of firefighting units, there is monetary impact in property loss, effect on businesses, and relief efforts. People can lose their homes and businesses if a wildfire reaches populated areas. Wildfires can have long term economic effects on businesses such as the timber market (Butry et al.) As more people are affected, the cost of wildfire relief efforts goes up in order to help them recover. As a whole, an increase in wildfire severity and frequency leads to more firefighting units needed and more people affected, increasing cost in all areas.
 	One important area to look at is the split between costs in wildfire prevention and wildfire response. As emergency firefighting costs rise, they cut into the money that can be spent on prevention measures (Gorte 2013). This can lead to an underfunding for wildfire prevention, which in turn leads to more wildfires. As a result, it is important to make sure that wildfire prevention measures are still taken into account when looking at the cost of reducing wildfires.
 Overall, wildfires are a major issue that affects both people and the environment. While we will be looking at the cost of firefighting resources, there are many other costs of wildfires, such as in prevention, loss of property, injury, and more. When developing our models, the most important areas to consider will be fire size, fire severity, and geography, but many other variables will be important to include because of their influence on fire fighting. 
+
 Dataset Description (1/2 page)
+
 https://www.kaggle.com/datasets/behroozsohrabi/us-wildfire-records-6th-edition  
 
 The "US Wildfire Records (6th Edition)" dataset is an extensive compilation of wildfire incidents across the United States, detailedly recorded offering insights into wildfire occurrences, characteristics, and impacts. It offers a historical record of wildfires from as early as the 1980s up to the present, allowing for long-term trend analysis and the study of wildfire behavior in the context of changing environmental conditions.
@@ -56,7 +68,9 @@ From the 10,000 data points selected, most are clean and well-organized. However
 Researchers have utilized this dataset for various projects, including the development of machine learning models to predict wildfire risk, analyses of the impact of climate change on wildfire frequency and severity, and studies on the effectiveness of different wildfire management and prevention strategies. These projects not only advance our understanding but also inform policy and practice in wildfire-prone areas.
 
 This dataset was used for the size, cause, and duration models. Unfortunately, the dataset was missing information about Dollar Damage, a topic central to our project. So for the Dollar Damage model, we used information from the California Department of Forestry and Fire Protection’s “Redbooks” about the historical costs of wildfires in California counties. Similarly, this data was appended with data from the NCEI to include the average temperature and precipitation, this time by individual counties.
+
 Proposed solution and experimental results (4-5 pages)
+
 Linear Regression to Predict Fire Duration
 Predicting the duration of fires is a critical challenge in natural disaster management and response planning. Leveraging a dataset of the first 10,000 fire incidents, this report outlines an analysis to develop a predictive model. The model aims to estimate fire durations based on three key variables: precipitation in the month, average temperature in the month, and the geographical state of the fire occurrence.
 This analysis focused on four primary variables from our entire dataset: DURATION_HOURS, Precipitation_In_Month, Avg_Temp_In_Month, and STATE. Initial data exploration revealed outliers in fire duration, which were subsequently removed to enhance model accuracy. Outliers were identified beyond 22.25 hours of fire duration, a threshold established through statistical analysis. Moreover, to address the categorical nature of the STATE variable, one-hot encoding was applied, transforming it into a series of binary columns, thereby making the dataset amenable to regression analysis.
